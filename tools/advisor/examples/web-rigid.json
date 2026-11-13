@@ -1,0 +1,18 @@
+{
+  "target": "web",
+  "game": "new_game",
+  "priority": "distribution",
+  "physics": ["rigid_body", "joints"],
+  "physics_hz": 60,
+  "rendering": "raster",
+  "material": "pbr",
+  "lights": "directional",
+  "shadows": "shadow_map",
+  "reflections": "environment_map",
+  "indirect_light": "ambient",
+  "audio": "basic",
+  "network": "authoritative",
+  "width": 1280,
+  "height": 720,
+  "target_fps": 60
+}

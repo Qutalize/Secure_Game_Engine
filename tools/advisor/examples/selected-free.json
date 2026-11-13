@@ -1,0 +1,8 @@
+{
+  "target": "windows",
+  "game": "new_game",
+  "physics": [],
+  "material": "unlit",
+  "lights": "none",
+  "indirect_light": "none"
+}

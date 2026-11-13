@@ -1,0 +1,17 @@
+{
+  "game": "fps",
+  "model": "fbx",
+  "model_path": "assets/models/creator/two-bone-binary.fbx",
+  "animation": "skeletal",
+  "animation_clip": "Swing",
+  "physics": [
+    "rigid_body"
+  ],
+  "material": "pbr",
+  "rendering": "hybrid",
+  "shadows": "ray_traced",
+  "reflections": "ray_traced",
+  "model_ray_tracing": "triangles",
+  "model_physics": "deforming_mesh",
+  "distribution": "signed"
+}

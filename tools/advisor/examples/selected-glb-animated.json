@@ -1,0 +1,8 @@
+{
+  "game": "tps",
+  "model": "glb",
+  "model_path": "assets/models/creator/two-bone.glb",
+  "animation": "skeletal",
+  "animation_clip": "Swing",
+  "physics": []
+}

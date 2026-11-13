@@ -1,0 +1,8 @@
+{
+  "game": "tps",
+  "model": "glb",
+  "model_path": "assets/models/creator/two-bone.glb",
+  "animation": "none",
+  "animation_clip": "",
+  "physics": []
+}

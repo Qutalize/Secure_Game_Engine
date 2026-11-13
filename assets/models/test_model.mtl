@@ -1,0 +1,4 @@
+# test_model.mtl — test_model.obj 用マテリアル（自作・パブリックドメイン）
+newmtl pyramid
+# Kd = 拡散反射色（ObjLoader が頂点色として取り込む）。オレンジ系で陰影を見やすく。
+Kd 0.90 0.55 0.20

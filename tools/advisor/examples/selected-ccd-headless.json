@@ -1,0 +1,20 @@
+{
+  "game": "fps",
+  "model": "glb",
+  "model_path": "assets/models/creator/two-bone.glb",
+  "animation": "skeletal",
+  "animation_clip": "Swing",
+  "physics": [
+    "rigid_body"
+  ],
+  "material": "unlit",
+  "rendering": "none",
+  "shadows": "none",
+  "reflections": "none",
+  "model_ray_tracing": "none",
+  "model_physics": "deforming_mesh",
+  "lights": "none",
+  "indirect_light": "none",
+  "ray_acceleration": "unspecified",
+  "deformation_ccd": "conservative"
+}

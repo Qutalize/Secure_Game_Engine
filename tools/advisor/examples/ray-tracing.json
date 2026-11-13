@@ -1,0 +1,17 @@
+{
+  "target": "windows",
+  "game": "new_game",
+  "physics": ["rigid_body"],
+  "rendering": "hybrid",
+  "material": "pbr",
+  "lights": "mixed",
+  "shadows": "shadow_map",
+  "reflections": "ray_traced",
+  "indirect_light": "ray_traced",
+  "ray_acceleration": "hardware_required",
+  "animation": "skeletal",
+  "audio": "spatial",
+  "width": 1920,
+  "height": 1080,
+  "target_fps": 60
+}

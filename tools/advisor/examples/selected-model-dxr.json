@@ -1,0 +1,13 @@
+{
+  "game": "tps",
+  "model": "obj",
+  "model_path": "assets/models/creator/tetrahedron.obj",
+  "width": 960,
+  "height": 540,
+  "physics": [],
+  "rendering": "hybrid",
+  "shadows": "ray_traced",
+  "reflections": "ray_traced",
+  "ray_acceleration": "hardware_required",
+  "model_ray_tracing": "triangles"
+}

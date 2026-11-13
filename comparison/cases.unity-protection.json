@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "name": "Unity_Mono",
+      "cwd": "../output/packages/range-unity-mono-control",
+      "command": ["RangeUnity.exe", "-force-d3d11", "--replay", "RangeUnity_Data/StreamingAssets/tour.json"],
+      "conditions": {
+        "build": "Unity 6000.3.7f1 Mono Release; same current range code; splash disabled",
+        "scenario": "tour.json 120Hz deterministic simulation; D3D11 1600x900 Gamma VSync ON MSAA OFF",
+        "measurement": "launcher to update callback and CPU frame intervals; cache uncontrolled; no native DX12 performance comparison"
+      }
+    },
+    {
+      "name": "Unity_IL2CPP",
+      "cwd": "../output/packages/range-unity-il2cpp-protected",
+      "command": ["RangeUnity.exe", "-force-d3d11", "--replay", "RangeUnity_Data/StreamingAssets/tour.json"],
+      "conditions": {
+        "build": "Unity 6000.3.7f1 IL2CPP Release/Medium stripping; same current range code; generated C++/PDB/SymbolMap excluded; own GameAssembly debug metadata scrubbed",
+        "scenario": "tour.json 120Hz deterministic simulation; D3D11 1600x900 Gamma VSync ON MSAA OFF",
+        "measurement": "launcher to update callback and CPU frame intervals; cache uncontrolled; no native DX12 performance comparison"
+      }
+    }
+  ]
+}

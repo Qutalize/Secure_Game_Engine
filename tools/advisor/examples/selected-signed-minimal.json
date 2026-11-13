@@ -1,0 +1,8 @@
+{
+  "rendering": "none",
+  "material": "unlit",
+  "lights": "none",
+  "indirect_light": "none",
+  "physics": [],
+  "distribution": "signed"
+}

@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "name": "protected_range_unsigned_inventory",
+      "cwd": "../output/packages/range-protected-final",
+      "command": ["RangeGame.exe", "--replay", "data/tour.json"],
+      "conditions": {
+        "build": "MSVC Release range PROTECT_DISTRIBUTION=ON VERIFY_DISTRIBUTION=OFF; prior final package",
+        "scenario": "tour.json deterministic 120Hz; 1600x900 DX12 VSync ON; no audio/network",
+        "measurement": "CPU update entry/loop intervals, OS cache uncontrolled, not display/input latency"
+      }
+    },
+    {
+      "name": "protected_range_signed_inventory",
+      "cwd": "../output/packages/range-signed-v2-final",
+      "command": ["RangeGame.exe", "--replay", "data/tour.json"],
+      "conditions": {
+        "build": "MSVC Release range PROTECT_DISTRIBUTION=ON VERIFY_DISTRIBUTION=ON; experimental P-256 inventory",
+        "scenario": "tour.json deterministic 120Hz; 1600x900 DX12 VSync ON; no audio/network; CNG verification on startup",
+        "measurement": "CPU update entry/loop intervals, OS cache uncontrolled, not display/input latency"
+      }
+    }
+  ]
+}

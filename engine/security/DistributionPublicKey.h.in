@@ -1,0 +1,2 @@
+#pragma once
+namespace distribution { inline constexpr char PublicKeyHex[]="@DISTRIBUTION_PUBLIC_KEY_HEX@"; }

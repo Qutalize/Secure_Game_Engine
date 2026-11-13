@@ -1,0 +1,9 @@
+{
+  "game": "tps",
+  "model": "obj",
+  "model_path": "assets/models/creator/split-platform.obj",
+  "width": 960,
+  "height": 540,
+  "physics": [],
+  "model_physics": "static_mesh"
+}

@@ -1,0 +1,7 @@
+{
+  "target": "windows",
+  "game": "tps",
+  "material": "pbr",
+  "shadows": "shadow_map",
+  "audio": "basic"
+}

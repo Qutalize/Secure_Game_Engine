@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "name": "native_range",
+      "cwd": "../output/packages/range-native",
+      "command": ["RangeGame.exe", "--replay", "data/tour.json"],
+      "conditions": {
+        "engine": "custom C++20 DX12",
+        "build": "Release GAME_PROFILE=range HARDENED=OFF",
+        "scenario": "range v1; tour.json 120Hz replay; no security/audio/network",
+        "graphics": "D3D12; 1600x900 client; vSync ON; MSAA OFF; vertex color; no shadows",
+        "readiness": "scene objects and HUD allocated; first update entry, not display completion",
+        "gpu_driver_monitor_power": "record event PC; do not claim cold-start or input latency",
+        "assets": "self-authored boxes; package-local precompiled DXIL"
+      }
+    },
+    {
+      "name": "unity_range",
+      "known_issue": "On the event Intel Iris Xe PC, forced D3D12 can crash in D3D12Core.dll+0xA1F5 during shutdown. This case is diagnostic only until resolved; see comparison/WARNINGS.md.",
+      "cwd": "../output/packages/range-unity-mono-control",
+      "command": ["RangeUnity.exe", "-force-d3d12", "-screen-width", "1600", "-screen-height", "900", "-screen-fullscreen", "0", "--require-comparison-settings", "--replay", "RangeUnity_Data/StreamingAssets/tour.json", "-logFile", "-"],
+      "conditions": {
+        "engine": "Unity 6000.3.7f1 Built-in",
+        "build": "non-Development Windows x64 Mono; Input System 1.18.0; splash OFF; stripEngineCode does not strip native modules with Mono",
+        "scenario": "range v1; tour.json 120Hz replay; no security/audio/network",
+        "graphics": "D3D12; 1600x900 client; vSync ON; MSAA OFF; Gamma vertex color; no shadows",
+        "readiness": "Start completes object/HUD creation; explicit MarkSceneReady; first Update entry",
+        "gpu_driver_monitor_power": "record event PC; do not claim cold-start or input latency",
+        "assets": "same JSON, mesh/color/HUD specification; no third-party art"
+      }
+    }
+  ]
+}

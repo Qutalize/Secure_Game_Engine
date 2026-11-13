@@ -1,0 +1,6 @@
+{
+  "target": "windows",
+  "game": "action_rpg",
+  "material": "pbr",
+  "shadows": "shadow_map"
+}

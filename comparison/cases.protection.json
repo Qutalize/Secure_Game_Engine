@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "name": "normal_range",
+      "cwd": "../output/packages/range-native",
+      "command": ["RangeGame.exe", "--replay", "data/tour.json"],
+      "conditions": {
+        "build": "MSVC Release GAME_PROFILE=range HARDENED=OFF PROTECT_DISTRIBUTION=OFF",
+        "scenario": "tour.json deterministic 120Hz; 1600x900 DX12 VSync ON; no security/audio/network",
+        "gpu": "Intel Iris Xe 32.0.101.6737; i7-1265U; monitor 2256x1504 59Hz; Balanced power plan",
+        "measurement": "update entry and CPU loop intervals; OS cache uncontrolled; not input-to-display latency"
+      }
+    },
+    {
+      "name": "protected_range",
+      "cwd": "../output/packages/range-protected-final",
+      "command": ["RangeGame.exe", "--replay", "data/tour.json"],
+      "conditions": {
+        "build": "MSVC Release GAME_PROFILE=range HARDENED=OFF PROTECT_DISTRIBUTION=ON; metadata scrubbed",
+        "scenario": "tour.json deterministic 120Hz; 1600x900 DX12 VSync ON; no security/audio/network",
+        "gpu": "Intel Iris Xe 32.0.101.6737; i7-1265U; monitor 2256x1504 59Hz; Balanced power plan",
+        "measurement": "update entry and CPU loop intervals; OS cache uncontrolled; not input-to-display latency"
+      }
+    }
+  ]
+}

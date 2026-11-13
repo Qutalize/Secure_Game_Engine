@@ -1,0 +1,93 @@
+; FBX 7.4.0 project file; CC0 Gameengine two-bone fixture
+FBXHeaderExtension: {
+ FBXHeaderVersion: 1003
+ FBXVersion: 7400
+}
+GlobalSettings: {
+ Version: 1000
+ Properties70: {
+ P: "UpAxis", "int", "Integer", "",1
+ P: "UpAxisSign", "int", "Integer", "",1
+ P: "FrontAxis", "int", "Integer", "",2
+ P: "FrontAxisSign", "int", "Integer", "",-1
+ P: "CoordAxis", "int", "Integer", "",0
+ P: "CoordAxisSign", "int", "Integer", "",1
+ P: "UnitScaleFactor", "double", "Number", "",100
+ }
+}
+Objects: {
+Geometry: 100, "Geometry::Ribbon", "Mesh" {
+ Vertices: *18 { a: -0.4,0,0,0.4,0,0,-0.4,1,0,0.4,1,0,-0.4,2,0,0.4,2,0 }
+ PolygonVertexIndex: *12 { a: 0,2,-2,1,2,-4,2,4,-4,3,4,-6 }
+}
+Model: 200, "Model::Ribbon", "Mesh" { Version: 232 }
+Model: 201, "Model::Root", "LimbNode" { Version: 232 }
+Model: 202, "Model::Tip", "LimbNode" {
+ Version: 232
+ Properties70: { P: "Lcl Translation", "Lcl Translation", "", "A",0,1,0 }
+}
+Deformer: 300, "Deformer::Skin", "Skin" { Version: 101 }
+Deformer: 301, "SubDeformer::Cluster", "Cluster" {
+ Version: 100
+ Indexes: *4 { a: 0,1,2,3 }
+ Weights: *4 { a: 1,1,0.5,0.5 }
+ Transform: *16 { a: 1.0,0,0,0,0,1.0,0,0,0,0,1.0,0,0,0,0,1.0 }
+ TransformLink: *16 { a: 1.0,0,0,0,0,1.0,0,0,0,0,1.0,0,0,0,0,1.0 }
+}
+Deformer: 302, "SubDeformer::Cluster", "Cluster" {
+ Version: 100
+ Indexes: *4 { a: 2,3,4,5 }
+ Weights: *4 { a: 0.5,0.5,1,1 }
+ Transform: *16 { a: 1.0,0,0,0,0,1.0,0,0,0,0,1.0,0,0,-1,0,1.0 }
+ TransformLink: *16 { a: 1.0,0,0,0,0,1.0,0,0,0,0,1.0,0,0,1,0,1.0 }
+}
+AnimationStack: 400, "AnimStack::Swing", "" {
+ Properties70: {
+ P: "LocalStart", "KTime", "Time", "",0
+ P: "LocalStop", "KTime", "Time", "",92372316000
+ }
+}
+AnimationLayer: 401, "AnimLayer::BaseLayer", "" { }
+AnimationCurveNode: 410, "AnimCurveNode::TRS", "" {
+ Properties70: { P: "d|Z", "Number", "", "A",0 }
+}
+AnimationCurve: 420, "AnimCurve::Curve", "" {
+ Default: 0
+ KeyVer: 4008
+ KeyTime: *3 { a: 0,46186158000,92372316000 }
+ KeyValueFloat: *3 { a: 0,45,0 }
+ KeyAttrFlags: *3 { a: 4,4,4 }
+ KeyAttrDataFloat: *12 { a: 0,0,0,0,0,0,0,0,0,0,0,0 }
+ KeyAttrRefCount: *3 { a: 1,1,1 }
+}
+AnimationCurveNode: 411, "AnimCurveNode::TRS", "" {
+ Properties70: { P: "d|X", "Number", "", "A",0 }
+}
+AnimationCurve: 421, "AnimCurve::Curve", "" {
+ Default: 0
+ KeyVer: 4008
+ KeyTime: *3 { a: 0,46186158000,92372316000 }
+ KeyValueFloat: *3 { a: 0,1,0 }
+ KeyAttrFlags: *3 { a: 4,4,4 }
+ KeyAttrDataFloat: *12 { a: 0,0,0,0,0,0,0,0,0,0,0,0 }
+ KeyAttrRefCount: *3 { a: 1,1,1 }
+}
+}
+Connections: {
+C: "OO",100,200
+C: "OO",200,0
+C: "OO",201,0
+C: "OO",202,201
+C: "OO",300,100
+C: "OO",301,300
+C: "OO",302,300
+C: "OO",201,301
+C: "OO",202,302
+C: "OO",401,400
+C: "OO",410,401
+C: "OP",410,202,"Lcl Rotation"
+C: "OP",420,410,"d|Z"
+C: "OO",411,401
+C: "OP",411,201,"Lcl Translation"
+C: "OP",421,411,"d|X"
+}

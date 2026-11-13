@@ -1,0 +1,11 @@
+{
+  "game": "tps",
+  "rendering": "hybrid",
+  "material": "pbr",
+  "shadows": "ray_traced",
+  "reflections": "ray_traced",
+  "ray_acceleration": "hardware_required",
+  "physics": [],
+  "width": 960,
+  "height": 540
+}

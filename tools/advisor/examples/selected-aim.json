@@ -1,0 +1,11 @@
+{
+  "target": "windows",
+  "game": "aim_training",
+  "priority": "runtime",
+  "physics": [
+    "collision"
+  ],
+  "material": "unlit",
+  "lights": "none",
+  "indirect_light": "none"
+}

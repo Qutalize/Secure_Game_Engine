@@ -1,0 +1,55 @@
+# ビルド出力
+/build/
+/build-event/
+/build-range/
+/build-fps/
+/build-protected/
+/build-range-protected/
+/build-signed/
+/build-range-signed/
+/output/
+/comparison/__pycache__/
+/comparison/unity/Library/
+/comparison/unity/Temp/
+/comparison/unity/Logs/
+/comparison/unity/obj/
+/comparison/unity/UserSettings/
+/tools/benchmark/__pycache__/
+/tools/release/__pycache__/
+/out/
+/.venv/
+**/__pycache__/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# 生成物
+*.pak
+*.dxil
+*.obj
+*.exe
+*.pdb
+*.ilk
+
+# OS
+Thumbs.db
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# 外部アセット（★ライセンス上コミット禁止★）
+# ---------------------------------------------------------------------------
+# Unity Asset Store で入手した素材は EULA 上「自分の製品に組み込んで使う」ことは
+# 許されるが、素材そのものの再配布は禁止されている。リポジトリに置くと
+# 「素材の再配布」に当たるため、変換後の .glb も含めてコミットしない。
+# CC0 のものだけを assets/models/ 直下に置き、出典を assets/CREDITS.md に記録すること。
+/assets/models/external/
+
+# Authoritative server build and local seat credentials
+/server_rs/target/
+*.key
+
+# 自作のWavefrontモデルはソース素材
+!assets/models/**/*.obj
+!assets/models/*.obj

@@ -1,0 +1,14 @@
+{
+  "game": "tps",
+  "model": "glb",
+  "model_path": "assets/models/creator/two-bone.glb",
+  "animation": "skeletal",
+  "animation_clip": "Swing",
+  "physics": [],
+  "material": "pbr",
+  "rendering": "hybrid",
+  "shadows": "ray_traced",
+  "reflections": "ray_traced",
+  "model_ray_tracing": "triangles",
+  "ray_acceleration": "hardware_required"
+}

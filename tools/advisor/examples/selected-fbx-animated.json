@@ -1,0 +1,8 @@
+{
+  "game": "tps",
+  "model": "fbx",
+  "model_path": "assets/models/creator/two-bone.fbx",
+  "animation": "skeletal",
+  "animation_clip": "Swing",
+  "physics": []
+}

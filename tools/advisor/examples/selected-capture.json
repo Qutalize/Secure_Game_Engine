@@ -1,0 +1,5 @@
+{
+  "target": "windows",
+  "game": "monster_capture",
+  "audio": "basic"
+}

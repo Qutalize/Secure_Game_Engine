@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "name": "native_fps_normal",
+      "cwd": "../..",
+      "command": ["build-event/Release/GameEngine.exe", "--mode", "fps"],
+      "conditions": {
+        "engine": "custom C++20 DX12",
+        "build": "Release HARDENED=OFF",
+        "scenario": "existing fps, idle at spawn; NOT matched to Unity",
+        "resolution": "1600x900 client; verify on event PC",
+        "vsync": "on",
+        "security": "fps defaults P=OFF M=OFF; do not toggle during run",
+        "network": "existing localhost UDP path; no server should be running",
+        "gpu_driver_monitor_power": "record event PC GPU, driver, refresh rate and power mode here",
+        "assets_shaders": "existing assets, precompiled build-event/shaders; retain log to check fallbacks"
+      }
+    }
+  ]
+}

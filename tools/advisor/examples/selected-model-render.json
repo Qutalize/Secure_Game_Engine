@@ -1,0 +1,8 @@
+{
+  "game": "tps",
+  "model": "obj",
+  "model_path": "assets/models/creator/tetrahedron.obj",
+  "width": 960,
+  "height": 540,
+  "physics": []
+}

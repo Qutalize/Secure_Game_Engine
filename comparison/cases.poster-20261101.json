@@ -1,0 +1,58 @@
+{
+  "cases": [
+    {
+      "name": "Native_Unsigned",
+      "cwd": "../output/packages/range-protected-final",
+      "distribution": "../output/packages/range-protected-final",
+      "command": [
+        "RangeGame.exe",
+        "--replay",
+        "data/tour.json"
+      ],
+      "conditions": {
+        "scene": "Common range, tour.json replay at 120 Hz, 1600x900, VSync ON; no audio, PBR, shadows or network",
+        "interpretation": "Observed packaged configurations, NOT isolated engine effect: native DX12 vs Unity D3D11; editor, display/input latency, cold boot and graphics quality not measured",
+        "graphics_api": "DX12",
+        "signature_verification": false,
+        "build": "Existing 2026-10-04 packaged Release build; exact executable and file SHA256 recorded separately"
+      }
+    },
+    {
+      "name": "Native_Signed",
+      "cwd": "../output/packages/range-signed-v2-final",
+      "distribution": "../output/packages/range-signed-v2-final",
+      "command": [
+        "RangeGame.exe",
+        "--replay",
+        "data/tour.json"
+      ],
+      "conditions": {
+        "scene": "Common range, tour.json replay at 120 Hz, 1600x900, VSync ON; no audio, PBR, shadows or network",
+        "interpretation": "Observed packaged configurations, NOT isolated engine effect: native DX12 vs Unity D3D11; editor, display/input latency, cold boot and graphics quality not measured",
+        "graphics_api": "DX12",
+        "signature_verification": true,
+        "build": "Existing 2026-10-04 packaged Release build; exact executable and file SHA256 recorded separately"
+      }
+    },
+    {
+      "name": "Unity_IL2CPP",
+      "cwd": "../output/packages/range-unity-il2cpp-protected",
+      "distribution": "../output/packages/range-unity-il2cpp-protected",
+      "command": [
+        "RangeUnity.exe",
+        "-force-d3d11",
+        "-logFile",
+        "-",
+        "--replay",
+        "RangeUnity_Data/StreamingAssets/tour.json"
+      ],
+      "conditions": {
+        "scene": "Common range, tour.json replay at 120 Hz, 1600x900, VSync ON; no audio, PBR, shadows or network",
+        "interpretation": "Observed packaged configurations, NOT isolated engine effect: native DX12 vs Unity D3D11; editor, display/input latency, cold boot and graphics quality not measured",
+        "graphics_api": "D3D11",
+        "signature_verification": false,
+        "build": "Existing 2026-10-04 packaged Release build; exact executable and file SHA256 recorded separately"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "game": "tps",
+  "physics": [
+    "rigid_body"
+  ],
+  "material": "pbr",
+  "shadows": "shadow_map"
+}
