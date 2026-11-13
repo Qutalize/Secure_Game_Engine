@@ -1,4 +1,4 @@
-# Secure Game Engine
+# Noctis --- Secure Game Engine ---
 
 Windows向けにC++20とDirectX 12で開発しているゲームエンジンです。個人・少人数のゲーム開発者が、必要な機能と防御を選んで利用できる構成を目指しています。汎用の完成済みSDKではなく、開発・検証中のプロジェクトです。
 
